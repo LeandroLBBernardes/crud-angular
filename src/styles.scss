@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/cdk/overlay-prebuilt.css';
+
+:root {
+    --background: #f0f2f5;
+    --red: #e52e4d;
+    --blue: #5429cc;
+    --blue-light: #6933ff;
+    --black: #24252A;
+    --green: #33cc95;
+    --text-title: #363f5f;
+    --text-body: #969cb3;
+    --shape: #ffffff;
+}
+
+
+html, body { 
+    height: 100%;
+    background: var(--background);
+
+    @media (max-width: 1080px) { 
+        font-size: 93.75%;
+    }
+
+    @media (max-width: 720px) {
+        font-size: 87.5%;
+    }
+}
+
+body { 
+    margin: 0; 
+    -webkit-font-smoothing: antialiased; 
+}
+
+body, input, textarea, button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+    font-weight: 600;
+}
+
+button, a {
+    cursor: pointer;
+}
+

@@ -1,0 +1,53 @@
+.container {
+    margin-top: 30px;
+
+    padding: 16px;
+    background: var(--shape);
+    border: 0.1px solid rgb(231, 228, 228);
+    border-radius: 5px;
+
+    h1 {
+        margin: 0px;
+    }
+
+    .card-body {
+        margin: 16px 0px;
+    }
+
+    .card-footer {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+
+        button {
+            margin-left: 10px;
+            transition: 0.2s;
+            font-size: 16px;
+            padding: 0.5rem 2rem;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &.action1 {
+                color: var(--green);
+                background: var(--shape);
+                border: 0.1px solid var(--green);
+
+                &:hover {
+                    background: var(--green);
+                    color: var(--shape);
+                }
+            }
+
+            &.action2 {
+                color: var(--red);
+                background: var(--shape);
+                border: 0.1px solid var(--red);
+
+                &:hover {
+                    background: var(--red);
+                    color: var(--shape);
+                }
+            }
+        }
+    }
+}

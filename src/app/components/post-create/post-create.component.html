@@ -1,0 +1,19 @@
+<div class="header">
+    <h1>{{modalTitle}}</h1>
+</div>
+<div class="post-form">
+    <label for="title">Título: </label>
+    <input type="text" id="title" name="title" placeholder="Digite o Título" [value]="modalTitleContent">
+    <label for="content">Conteúdo: </label>
+    <textarea id="content" name="content" [(ngModel)]="modalTextContent" (ngModelChange)="onChange($event)" [value]="modalTextContent">
+    </textarea>
+    <p>{{count}}/600</p>
+    <div class="post-form-footer">
+        <button class="action1">
+            Salvar
+        </button>
+        <button class="action2" (click)="btnClick(true)">
+            Cancelar
+        </button>
+    </div>
+</div>
