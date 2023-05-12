@@ -1,5 +1,7 @@
-<app-header></app-header>
-
 <div class="container">
-    <app-post-create modal-title="Postar" (btnClickEvent)="redirectToMainScreen($event)"></app-post-create>
+    <app-post-create 
+        modal-title="Postar" 
+        (btnClickCancelEvent)="redirectToMainScreen()"
+        (btnClickSaveEvent)="post($event)">
+    </app-post-create>
 </div>

@@ -1,5 +1,5 @@
 export interface IPostData {
-    id: number;
+    _id: string;
     title: string;
     titleContent: string;
     textContent: string;

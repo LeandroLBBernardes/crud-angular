@@ -14,6 +14,8 @@ import { PostModalComponent } from './components/post-modal/post-modal.component
 import { PostViewScreenComponent } from './components/post-view-screen/post-view-screen.component';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { AppRoutingModule } from './app-routing.module';
     MatGridListModule,
     DialogModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

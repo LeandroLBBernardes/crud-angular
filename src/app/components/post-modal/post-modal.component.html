@@ -1,6 +1,7 @@
 <app-post-create 
     [modal-title]="formTitle" 
-    (btnClickEvent)="closeModal($event)" 
+    (btnClickCancelEvent)="closeModal($event)"
+    (btnClickSaveEvent)="editPost($event)" 
     [modal-title-content]="contentTitle"
     [modal-text-content]="contentText">
 </app-post-create>

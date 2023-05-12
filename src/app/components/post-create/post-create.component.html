@@ -2,17 +2,38 @@
     <h1>{{modalTitle}}</h1>
 </div>
 <div class="post-form">
-    <label for="title">Título: </label>
-    <input type="text" id="title" name="title" placeholder="Digite o Título" [value]="modalTitleContent">
-    <label for="content">Conteúdo: </label>
-    <textarea id="content" name="content" [(ngModel)]="modalTextContent" (ngModelChange)="onChange($event)" [value]="modalTextContent">
-    </textarea>
-    <p>{{count}}/600</p>
+    <form [formGroup]="postForm">
+        <label for="title" >Título: </label>
+        <input 
+            type="text" 
+            id="title" 
+            name="title" 
+            placeholder="Digite o Título" 
+            [(ngModel)]="modalTitleContent" 
+            [value]="modalTitleContent"
+            formControlName="title" />
+        <div *ngIf="postForm.get('title')?.errors?.['required'] && postForm.get('title')?.touched" class="error">
+            Título obrigatório
+        </div>
+        <label for="content">Conteúdo: </label>
+        <textarea 
+            id="content" 
+            name="content" 
+            [(ngModel)]="modalTextContent" 
+            (ngModelChange)="onChange($event)" 
+            [value]="modalTextContent"
+            formControlName="content">
+        </textarea>
+        <p>{{count}}/600</p>
+        <div *ngIf="postForm.get('content')?.errors?.['required'] && postForm.get('content')?.touched" class="error">
+            Conteúdo obrigatório
+        </div>
+    </form>
     <div class="post-form-footer">
-        <button class="action1">
+        <button class="action1" (click)="btnSaveClick()">
             Salvar
         </button>
-        <button class="action2" (click)="btnClick(true)">
+        <button class="action2" (click)="btnCancelClick(true)">
             Cancelar
         </button>
     </div>

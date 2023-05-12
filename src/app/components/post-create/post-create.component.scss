@@ -5,6 +5,10 @@
     padding: 16px;
     width: 40vw;
 
+    .error {
+        color: var(--red);
+    }
+
     @media (max-width: 720px) {
         width: 80vw;
     }
