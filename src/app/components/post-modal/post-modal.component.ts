@@ -27,7 +27,7 @@ export class PostModalComponent implements OnInit{
   }
 
   public ngOnInit(): void {
-    this.formTitle = 'Editar';
+    this.formTitle = 'Editar Post';
     this.contentTitle = this.data.titleContent;
     this.contentText = this.data.textContent;
   }
